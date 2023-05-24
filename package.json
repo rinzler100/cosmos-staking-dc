@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.3",
+    "node-fetch": "^2.6.7",
+    "puppeteer": "^20.3.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "name": "cosmos-staking-dc",
+  "version": "1.0.0",
+  "description": "Cosmos staking rewards with Discord webhooks using a webpage scraper.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rinzler100/cosmos-staking-dc.git"
+  },
+  "keywords": [
+    "atom",
+    "cosmos",
+    "crypto",
+    "discord",
+    "blockchain"
+  ],
+  "author": "Electro Cloud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rinzler100/cosmos-staking-dc/issues"
+  },
+  "homepage": "https://github.com/rinzler100/cosmos-staking-dc#readme"
+}
