@@ -7,7 +7,10 @@ const puppeteer = require('puppeteer');
 
 async function getRewardAmount() {
   try {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      headless: "new",
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
 
     await page.goto(url);
@@ -34,7 +37,7 @@ async function getRewardAmount() {
 async function sendDiscordMessage() {
   try {
     const rewardAmount = await getRewardAmount();
-	let message = 'Current unclaimed ATOM rewards: `' + rewardAmount + '`';
+	  let message = 'Current unclaimed ATOM rewards: `' + rewardAmount + '`';
     await fetch(discordWebhookUrl, {
       method: 'POST',
       headers: {
@@ -58,4 +61,3 @@ async function sendDiscordMessage() {
 setInterval(async function() {
 	await sendDiscordMessage();
 }, 86400000);
-
